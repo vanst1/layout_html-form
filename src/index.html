@@ -12,12 +12,13 @@
   </head>
   <body>
     <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post">
-      <fieldset class="Blocks">
+      <fieldset class="blocks">
         <legend>Personal information</legend>
         <label class="form-field" for="lname">
           Surname:
           <input 
-            type="text" 
+            type="text"
+            name="lname"
             id="lname"
             autocomplete="off"
             required
@@ -26,7 +27,8 @@
         <label class="form-field" for="fname">
           Name:
           <input 
-            type="text" 
+            type="text"
+            name="fname" 
             id="fname"
             autocomplete="off"
             required
@@ -35,7 +37,8 @@
         <label class="form-field" for="age">
           How old are You?
           <input 
-            type="number" 
+            type="number"
+            name="age" 
             id="age" 
             min="1"
             max="100"
@@ -49,18 +52,20 @@
         <label class="form-field" for="agreement">
           I accept the term of the agreement
           <input 
-            type="checkbox" 
+            type="checkbox"
+            name="agreement" 
             id="agreement"
             required
           >
         </label>
       </fieldset>
-      <fieldset class="Blocks">
+      <fieldset class="blocks">
         <legend>Registration</legend>
         <label class="form-field" for="email">
           E-mail:
           <input 
-            type="email" 
+            type="email"
+            name="email" 
             id="email"
             placeholder="email@example.com"
             required
@@ -69,42 +74,55 @@
         <label class="form-field" for="password">
           Password:
           <input 
-            type="password" 
+            type="password"
+            name="password" 
             id="password"
             required
           >
         </label>
       </fieldset>
-      <fieldset class="Blocks">
+      <fieldset class="blocks">
         <legend>An interesting fact about you!</legend>
         <label class="form-field" for="lovecats">
           Do you love cats?
           <input 
-            type="radio" 
-            id="Yes" 
-            value="Yes" 
+            type="radio"
             name="lovecats"
+            id="Yes" 
+            value="Yes"
           >
           <label for="Yes">Yes</label>
           <input 
-            type="radio" 
-            id="No" 
-            value="No" 
+            type="radio"
             name="lovecats"
+            id="No" 
+            value="No"
           >
           <label for="No">No</label>
         </label>
         <label class="form-field" for="fcolor">
           What is your favorite color?
-          <input type="color" id="fcolor">
+          <input 
+            type="color"
+            name="fcolor" 
+            id="fcolor"
+          >
         </label>
         <label class="form-field" for="btime">
           What time do you go to bed?
-          <input type="time" id="btime">
+          <input 
+            type="time"
+            name="btime" 
+            id="btime"
+          >
         </label>
         <label class="form-field" for="fcar">
           What are your favorite brand of cars?
-          <select id="fcar" multiple>
+          <select
+            name="fcar" 
+            id="fcar" 
+            multiple
+          >
             <option value="BMW">BMW</option>
             <option value="Audi">Audi</option>
             <option value="Lada">Lada</option>
@@ -112,22 +130,27 @@
         </label>
         <label class="form-field" for="workrate">
           How do you rate our work?
-          <input type="range" id="workrate">
+          <input 
+            type="range"
+            name="workrate" 
+            id="workrate"
+          >
         </label>
       </fieldset>
-      <fieldset class="Blocks">
+      <fieldset class="blocks">
         <legend>Additional info:</legend>
-        <label class="form-field" for="Comment">
+        <label class="form-field" for="comment">
           Comments:
           <textarea 
-            id="Comment"
+            name="comment"
+            id="comment"
             minlength="1"
             maxlength="60"
          ></textarea>
         </label>
         <label class="form-field" for="recomendation">
           Would you recommend us?
-          <select id="recomendation">
+          <select id="recomendation" name="recomendation">
             <option value="Yes">Yes</option>
             <option value="No">No</option>
           </select>
@@ -135,7 +158,7 @@
       </fieldset>
       <input 
         type="submit" 
-        class="Blocks" 
+        class="blocks" 
         value="Submit"
       >
     </form>

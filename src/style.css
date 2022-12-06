@@ -4,10 +4,10 @@
   margin-bottom: 10px;
 }
 
-.Blocks {
+.blocks {
   margin-bottom: 20px;
 }
 
-.Blocks :last-child {
+.blocks :last-child {
   margin-bottom: 0;
 }
